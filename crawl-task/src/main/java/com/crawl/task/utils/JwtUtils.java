@@ -40,7 +40,7 @@ public class JwtUtils {
 
     // 解析JWT令牌
     public static Claims parseToken(String token) {
-        return Jwts.parserBuilder()
+        return Jwts.parser()
                 .setSigningKey(getSigningKey())
                 .build()
                 .parseClaimsJws(token)
