@@ -1,0 +1,6 @@
+spring:
+  application:
+    name: crawl-dynamic
+
+server:
+  port: 8082

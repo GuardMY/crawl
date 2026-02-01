@@ -1,0 +1,6 @@
+spring:
+  application:
+    name: crawl-common
+
+server:
+  port: 8081
