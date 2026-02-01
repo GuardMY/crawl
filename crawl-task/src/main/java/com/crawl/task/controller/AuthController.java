@@ -3,7 +3,7 @@ package com.crawl.task.controller;
 import com.crawl.task.entity.User;
 import com.crawl.task.service.UserService;
 import com.crawl.task.utils.JwtUtils;
-import org.springframework.beans.factory.annotation.Autowired;
+import jakarta.annotation.Resource;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import java.util.HashMap;
@@ -13,7 +13,7 @@ import java.util.Map;
 @RequestMapping("/api/auth")
 public class AuthController {
 
-    @Autowired
+    @Resource
     private UserService userService;
 
     @PostMapping("/register")

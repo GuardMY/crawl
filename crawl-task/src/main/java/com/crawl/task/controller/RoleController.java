@@ -2,7 +2,7 @@ package com.crawl.task.controller;
 
 import com.crawl.task.entity.Role;
 import com.crawl.task.service.RoleService;
-import org.springframework.beans.factory.annotation.Autowired;
+import jakarta.annotation.Resource;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import java.util.List;
@@ -11,7 +11,7 @@ import java.util.List;
 @RequestMapping("/api/roles")
 public class RoleController {
 
-    @Autowired
+    @Resource
     private RoleService roleService;
 
     @PostMapping

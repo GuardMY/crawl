@@ -3,18 +3,18 @@ package com.crawl.task.service;
 import com.crawl.task.client.DynamicCrawlClient;
 import com.crawl.task.client.StaticCrawlClient;
 import com.crawl.task.entity.CrawlTask;
-import org.springframework.beans.factory.annotation.Autowired;
+import jakarta.annotation.Resource;
 import org.springframework.stereotype.Service;
 
 @Service
 public class TaskExecutionService {
-    @Autowired
+    @Resource
     private StaticCrawlClient staticCrawlClient;
 
-    @Autowired
+    @Resource
     private DynamicCrawlClient dynamicCrawlClient;
 
-    @Autowired
+    @Resource
     private CrawlTaskService crawlTaskService;
 
     public void executeTask(Long taskId) {

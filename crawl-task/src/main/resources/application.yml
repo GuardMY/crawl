@@ -8,6 +8,11 @@ spring:
     driverClassName: com.mysql.cj.jdbc.Driver
     username: root
     password: 123456
+  
+  # Disable Spring Cloud compatibility check
+  cloud:
+    compatibility-verifier:
+      enabled: false
 
 # MyBatis Plus Configuration
 mybatis-plus:

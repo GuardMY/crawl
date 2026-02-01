@@ -4,7 +4,7 @@ import com.crawl.task.entity.CrawlTask;
 import com.crawl.task.entity.User;
 import com.crawl.task.service.CrawlTaskService;
 import com.crawl.task.service.PermissionService;
-import org.springframework.beans.factory.annotation.Autowired;
+import jakarta.annotation.Resource;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.*;
@@ -13,10 +13,10 @@ import java.util.List;
 @RestController
 @RequestMapping("/api/tasks")
 public class CrawlTaskController {
-    @Autowired
+    @Resource
     private CrawlTaskService service;
 
-    @Autowired
+    @Resource
     private PermissionService permissionService;
 
     private Long getCurrentUserId() {
@@ -102,7 +102,7 @@ public class CrawlTaskController {
         return ResponseEntity.ok(failedTask);
     }
 
-    @Autowired
+    @Resource
     private com.crawl.task.service.TaskExecutionService taskExecutionService;
 
     @PostMapping("/{id}/execute")
